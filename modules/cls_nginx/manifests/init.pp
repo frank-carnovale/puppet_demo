@@ -4,6 +4,7 @@ class cls_nginx {
     }
     service { 'nginx':
         ensure => running,
+        enable => true,
         require => Package['nginx'],
     }
     file { '/home/frankc/stuff/public/blah.html':
